@@ -1,0 +1,62 @@
+import StickyNote from "../components/sticky_note";
+
+const translations = {
+  ltr: {
+    tasksTitle: 'Tasks',
+    currentDirection: 'Current Direction:',
+    leftToRight: 'Left-to-Right',
+    rightToLeft: 'Right-to-Left',
+    salary: 'Salary',
+    settings: 'Settings',
+    toDo: 'To Do',
+    completed: 'Completed',
+    inProgress: 'In Progress',
+    dueDate: 'Due Date',
+    task: 'Task',
+    addNote:'+ Note',
+    StickyNote:'Sticky Note',
+    TodaysDate:"Today's Date",
+    habit:" Habit",
+    health:"health",
+    /*//////////////////Table////////////*/
+    actions: 'Actions',
+    addTask: 'Add Task',
+    start: 'Start',
+    edit: 'Edit',
+    delete: 'Delete',
+    complete: 'Complete',
+    cancel: 'Cancel',
+    save: 'Save',
+
+  },
+  rtl: {
+    tasksTitle: 'المهام',
+    currentDirection: 'الاتجاه الحالي:',
+    leftToRight: 'من اليسار إلى اليمين',
+    rightToLeft: 'من اليمين إلى اليسار',
+    salary: 'الراتب',
+    settings: 'الإعدادات',
+    toDo: 'قيد الانتظار',
+    completed: 'مكتمل',
+    inProgress: 'قيد التنفيذ',
+    dueDate: 'تاريخ الاستحقاق',
+    task: 'المهمة',
+    addNote:'+ملاحظة',
+    StickyNote:'ملاحظة',
+    TodaysDate:'تاريخ اليوم',
+    habit:" عادة",
+    health:"  ",
+    /*//////////////////Table////////////*/
+    actions: 'الإجراءات',
+    addTask: 'إضافة مهمة',
+    start: 'ابدأ',
+    edit: 'تعديل',
+    delete: 'حذف',
+    complete: 'إنهاء',
+    cancel: 'إلغاء',
+    save: 'حفظ',
+    health:"صحة",
+  },
+};
+
+export default translations;
