@@ -18,11 +18,11 @@ const Sidebar = ({ isOpenSidebar, direction, translations ,children ,addNote}) =
       icon: <CupHot />,
     },
     
-    {
-      path: "/habit",
-      name: t.habit,
-      icon: <Clipboard2Data />,
-    },
+    // {
+    //   path: "/Habit",
+    //   name: t.habit,
+    //   icon: <Clipboard2Data />,
+    // },
     {
       path: "/settings",
       name: t.settings,
