@@ -17,7 +17,16 @@ const translations = {
     StickyNote:'Sticky Note',
     TodaysDate:"Today's Date",
     habit:" Habit",
-    health:"health",
+    health:"Health",
+    /*////////////////Calorie-Component///////////////////*/
+    stopScanning:"Stop Scanning",
+    startScanning:"Start Scanning",
+    scannedProduct:"Scanned Product",
+    Noproductsscannedyet:"Noproductsscannedyet",
+    barcode:'Barcode',
+    productName:'Product Name',
+    calories:'Calorie',
+    AddtoCalendar:'Add to Calendar',
     /*//////////////////Table////////////*/
     actions: 'Actions',
     addTask: 'Add Task',
@@ -56,6 +65,15 @@ const translations = {
     cancel: 'إلغاء',
     save: 'حفظ',
     health:"صحة",
+    /*////////////////Calorie-Component///////////////////*/
+    stopScanning:"توقف عن المسح",
+    startScanning:"ابدأ المسح",
+    scannedProduct:"المنتجات الممسوحة",
+    Noproductsscannedyet:"لم يتم مسح أي منتجات بعد",
+    barcode:'الباركود',
+    productName:'اسم المنتج',
+    calories:'السعرات الحرارية',
+    AddtoCalendar:'إضافة إلى التقويم',
   },
 };
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { format } from "date-fns";
 import { ar, enUS } from "date-fns/locale"; 
+import "../style/calendar.css";
 
 const Calendar = ({ direction, translations }) => {
   const t = translations[direction]; 

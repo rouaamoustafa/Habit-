@@ -1,0 +1,175 @@
+
+.calorie-container {
+    font-family: "Arial, sans-serif";
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .scan-image{
+    display: flex;
+    align-self: center;
+    width: 30vw;
+    height: 20vh;
+}
+  .camera-selector {
+    margin-bottom: 10px;
+  }
+  
+  .video-display-container {
+    margin: 20px 0;
+  }
+  .div-btn-start-stop{
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2vw;
+
+  }
+  .add-to-calendar-button{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 20vw;
+    height: 5vh;
+    text-align: center;
+  }
+  .start-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 10vw;
+    height: 5vh;
+    text-align: center;
+  }
+  
+  .stop-scanning-button {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 10vw;
+    height: 5vh;
+    text-align: center;
+  }
+  
+  .product-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+  }
+  
+  .error-message {
+    color: red;
+    margin: 10px 0;
+  }
+   
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .scan-image{
+        align-items: center;
+        display: block;
+        width: 60vw;
+    }
+    .start-button {
+        padding: 2px 4px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        width: 25vw;
+        height: 10vh;
+        text-align: center;
+      }
+      
+      .stop-scanning-button {
+        padding: 2px 4px;
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        width: 25vw;
+        height: 10vh;
+        text-align: center;
+      }
+    
+  }
+  
+  @media (min-width: 731px) and (max-width: 1024px) {
+    .start-button {
+        padding: 2px 4px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        width: 25vw;
+        height: 10vh;
+        text-align: center;
+      }
+      
+      .stop-scanning-button {
+        padding: 2px 4px;
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        width: 25vw;
+        height: 10vh;
+        text-align: center;
+      }
+    .habit-grid-header {
+      font-size: 13px;
+    }
+    .habit-grid {
+      grid-template-columns: repeat(7, 1fr);
+      gap: 6px;
+    }
+    .habit-day {
+      padding: 12px;
+      font-size: 14px;
+      min-height: 55px;
+    }
+    .habit-input {
+      font-size: 13px;
+    }
+    .habit-button {
+      padding: 7px 14px;
+      font-size: 13px;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .habit-container {
+      padding: 16px;
+      max-width: 600px;
+    }
+    .habit-header {
+      font-size: 24px;
+    }
+    .habit-grid-header {
+      font-size: 14px;
+    }
+    .habit-grid {
+      grid-template-columns: repeat(7, 1fr);
+      gap: 8px;
+    }
+    .habit-day {
+      padding: 16px;
+      font-size: 16px;
+      min-height: 60px;
+    }
+    .habit-input {
+      font-size: 14px;
+    }
+    .habit-button {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+  

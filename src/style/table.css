@@ -1,0 +1,102 @@
+/* table.css */
+.tasks-table {
+    background: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.tasks-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tasks-table th,
+.tasks-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    
+}
+.tasks-table td button{
+    margin-right: 5px;
+    border: 2px solid #4b86b4; 
+    border-radius: 5px;
+    background-color: white; 
+    color: #4b86b4;
+    
+}
+.tasks-table td button:hover{
+    border: none;
+    border-radius: 5px;
+    background-color: #4b86b4;
+    color: white;
+}
+.tasks-table td button:active{
+    border: none;
+    border-radius: 5px;
+    background-color: #4b86b4;
+    color: white;
+}
+.tasks-table th {
+    background: #f9f9f9;
+    font-weight: bold;
+}
+
+.add-task-btn{
+    margin-right: 5px;
+    border: 2px solid #35ae69; 
+    border-radius: 5px;
+    background-color: white; 
+    color: #35ae69;
+}
+.add-task-btn:hover{
+    border: none;
+    border-radius: 5px;
+    background-color: #35ae69;
+    color: white;
+}
+.add-task-btn:active{
+    border: none;
+    border-radius: 5px;
+    background-color: #35ae69;
+    color: white;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tasks-table {
+        padding: 10px;
+    }
+
+    .tasks-table table {
+        font-size: 14px;
+    }
+
+    .tasks-table th,
+    .tasks-table td {
+        padding: 8px;
+    }
+
+    .boutton {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tasks-table th,
+    .tasks-table td {
+        display: block;
+        text-align: left;
+        width: 100%;
+    }
+
+    .tasks-table th {
+        font-size: 12px;
+    }
+
+    .tasks-table td {
+        font-size: 14px;
+    }
+}

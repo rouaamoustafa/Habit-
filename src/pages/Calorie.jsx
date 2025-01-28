@@ -1,8 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
 import { BrowserMultiFormatReader } from "@zxing/library";
 import axios from "axios";
+import "../style/calorie.css";
+import scan from '../assets/scan.png';
+import CoolCalendar from "../components/cool_calendar";
 
- const Calorie = () =>{ 
+ const Calorie = ({direction ,translations}) =>{ 
+  const t = translations[direction];
   const [scanning, setScanning] = useState(false);
   const [devices, setDevices] = useState([]);
   const [selectedDevice, setSelectedDevice] = useState(null);
@@ -10,6 +14,7 @@ import axios from "axios";
   const [error, setError] = useState(null);
   const videoRef = useRef(null);
   const codeReader = useRef(new BrowserMultiFormatReader());
+  const [caloriesForCalendar, setCaloriesForCalendar] = useState(null);
 
   useEffect(() => {
     // Fetch available cameras
@@ -109,14 +114,18 @@ import axios from "axios";
     setError(null);
     setScanning(true);
   };
-
+  const handleAddToCalendar = () => {
+    const totalCalories = calculateTotalCalories();
+    setCaloriesForCalendar(totalCalories); 
+    console.log("pass to calendar");
+    console.log(totalCalories);
+  };
   return (
-    <div style={styles.container}>
-      <h1>Barcode Scanner with API</h1>
-
+    <div className="calorie-container">
+      <img className="scan-image" src={scan}/>
       {/* Camera Selection */}
       {devices.length > 1 && (
-        <div style={styles.cameraSelector}>
+        <div className="camera-selector">
           <label htmlFor="camera">Select Camera:</label>
           <select
             id="camera"
@@ -132,12 +141,13 @@ import axios from "axios";
         </div>
       )}
 
-      <button onClick={handleStart} style={styles.button}>
-        Start Scanning
+      <div className="div-btn-start-stop">
+      <button onClick={handleStart}  className="start-button">
+      {t.startScanning}
       </button>
 
       {scanning && (
-        <div style={styles.videoContainer}>
+        <div className="video-display-container">
           <video
             ref={videoRef}
             width="300"
@@ -147,22 +157,23 @@ import axios from "axios";
         </div>
       )}
 
-      <button onClick={stopScanning} style={styles.stopButton}>
-        Stop Scanning
+      <button onClick={stopScanning} className="stop-scanning-button">
+      {t.stopScanning}
       </button>
+      </div>
 
       {/* Display Error */}
-      {error && <p style={styles.error}>{error}</p>}
+      {error && <p className="error-message">{error}</p>}
 
       {/* Scanned Products Table */}
-      <h2>Scanned Products</h2>
+      <h2>{t.scannedProduct}</h2>
       {tableData.length > 0 ? (
-        <table style={styles.table}>
+        <table className="product-table">
           <thead>
             <tr>
-              <th>Barcode</th>
-              <th>Product Name</th>
-              <th>Calories</th>
+              <th>{t.barcode}</th>
+              <th>{t.product_name}</th>
+              <th>{t.calories}</th>
             </tr>
           </thead>
           <tbody>
@@ -176,56 +187,23 @@ import axios from "axios";
           </tbody>
         </table>
       ) : (
-        <p>No products scanned yet.</p>
+        <p>{t.Noproductsscannedyet}</p>
       )}
 
       {/* Display Total Calories */}
       {tableData.length > 0 && (
         <h3>Total Calories: {calculateTotalCalories()}</h3>
+        
       )}
+      {/* Add to Calendar Button */}
+      <div><button onClick={handleAddToCalendar} className="add-to-calendar-button">
+        {t.AddtoCalendar}
+      </button></div>
+      <CoolCalendar totalCalories={calculateTotalCalories()} />
     </div>
+    
   );
 };
 
-const styles = {
-  container: {
-    fontFamily: "Arial, sans-serif",
-    padding: "20px",
-    textAlign: "center",
-  },
-  cameraSelector: {
-    marginBottom: "10px",
-  },
-  videoContainer: {
-    margin: "20px 0",
-  },
-  button: {
-    padding: "10px 20px",
-    backgroundColor: "#007BFF",
-    color: "white",
-    border: "none",
-    borderRadius: "5px",
-    cursor: "pointer",
-    margin: "10px",
-  },
-  stopButton: {
-    padding: "10px 20px",
-    backgroundColor: "red",
-    color: "white",
-    border: "none",
-    borderRadius: "5px",
-    cursor: "pointer",
-    marginTop: "10px",
-  },
-  table: {
-    width: "80%",
-    margin: "20px auto",
-    borderCollapse: "collapse",
-  },
-  error: {
-    color: "red",
-    margin: "10px 0",
-  },
-};
 
 export default Calorie;

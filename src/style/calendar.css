@@ -1,0 +1,40 @@
+.calendar {
+    text-align: center;
+    padding: 5px;
+    color: #e9e6e6;
+    display: flex;
+    width: 150vw;
+    justify-content: center;
+    flex-direction: column;
+    
+  }
+  
+  .calendar .date {
+    font-size: 1.5rem;
+    font-weight: bold;                                                 
+    margin-top: 2px;                                     
+    color: #e9e6e6;
+  }
+   /* Responsive Styles */
+   @media (max-width: 768px) {
+    .calendar h5{
+      width: 80vw;
+    }
+    .calendar .date {
+      font-size: 1rem;
+      font-weight: bold;                                                 
+      margin-top: 2px;                                     
+      color: #e9e6e6;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .calendar h5{
+      width: 80vw;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+
+  }
+  

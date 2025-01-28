@@ -1,5 +1,6 @@
 import { useState, React,useEffect } from 'react';
 import Lottie from "lottie-react";
+import "../style/setting.css";
 import alarmAnimation from "../assets/lottie.json";
 
 const Settings = ({ direction,setDirection }) => {
@@ -34,7 +35,7 @@ const Settings = ({ direction,setDirection }) => {
 
   return (
     <div className="main-grid-settings">
-    <button  className='boutton' onClick={toggleDirection}>
+    <button  className='boutton-S' onClick={toggleDirection}>
     {direction === 'ltr' ? 'Arabic' : 'إنكليزي'}
     </button>
     <div className="alarm-container">
@@ -51,7 +52,7 @@ const Settings = ({ direction,setDirection }) => {
           <div className="alarm-content">
             <Lottie animationData={alarmAnimation} loop={true} />
             <p>{direction === 'ltr' ? ' Your alarm time has been reached! ' : "لقد حان وقت المنبه!"}</p>
-            <button className='boutton' onClick={handleCloseAlarm}>{direction === 'ltr' ? ' Cancel ' : ' إلغاء'}</button>
+            <button className='boutton-S' onClick={handleCloseAlarm}>{direction === 'ltr' ? ' Cancel ' : ' إلغاء'}</button>
           </div>
         </div>
       )}

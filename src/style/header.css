@@ -1,0 +1,52 @@
+.header {
+    position:relative;
+    top:0;
+    height: 15vh;
+    width: 100vw;
+    background-color: #4B86B4;
+    display: flex;
+    align-items: center;
+    justify-content:stretch;
+    padding: 0 20px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    flex-shrink: 0; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+    gap:30vw;
+  }
+.top_section {
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+    justify-content: center;
+   
+  }
+  
+  
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 15px;
+  }
+  
+.bars {
+    font-size: 25px;
+    cursor: pointer;
+  }
+.calendar-section {
+    grid-area: calendar;
+    padding: 5px;
+    border-radius: 8px;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+   
+  }
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+  .header{
+    gap:20vw;
+  }
+  }
+  

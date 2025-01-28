@@ -1,0 +1,92 @@
+/* task.css */
+.main-grid {
+    display: grid;
+    grid-template-areas:
+        "charts"
+        "tables";
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.charts-section {
+    grid-area: charts;
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+.task-form {
+    position: fixed;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.task-form input,
+.task-form button {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.task-form button {
+    background-color: #4B86B4;
+    color: white;
+    cursor: pointer;
+}
+
+.task-form button:hover {
+    background-color: #4B86B4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-grid {
+        grid-template-areas:
+            "charts"
+            "tables";
+        padding: 10px;
+    }
+
+    .charts-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .task-form {
+        width: 90%;
+    }
+}
+@media (min-width: 480px) and (max-width:768px){
+    .charts-section {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+@media (max-width: 480px) {
+    .charts-section {
+        gap: 5px;
+    }
+
+    .task-form {
+        padding: 15px;
+    }
+    .charts-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+@media (min-width: 786px) {
+    .charts-section {
+       justify-content: start;
+    }
+  }

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import CoolCalendar from "../components/calendar"
 import DonutChart from '../components/chart'
 import TasksTable from '../components/table'
 import Lottie from "lottie-react";
 import successAnimation from "../assets/like.json";
+import "../style/task.css";
 
 const Tasks = ({ direction, translations }) => {
  
@@ -84,12 +84,6 @@ const Tasks = ({ direction, translations }) => {
   
     return (
       <div className="main-grid">
-        {/* Calendar Section */}
-         {/* <div className="calendar-section">
-         <CoolCalendar />
-         </div> */}
-        {/* Donut Charts Section */}
-        
         <div className="charts-section">
           <DonutChart title={t.toDo} value={tasks.todo.length * 10} color="#FF6384" />
           <DonutChart title={t.inProgress} value={tasks.inProgress.length * 10} color="#FFCD56" />

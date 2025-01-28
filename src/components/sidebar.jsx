@@ -1,4 +1,5 @@
 import React from "react";
+import "../style/sidebar.css";
 import { NavLink } from "react-router-dom";
 import { Calendar2Month, CashCoin, Clipboard2Data, CupHot, Gear, Sticky } from "react-bootstrap-icons";
 
@@ -31,13 +32,9 @@ const Sidebar = ({ isOpenSidebar, direction, translations ,children ,addNote}) =
 
   return (
     <div className="container">
-      <div style={{width:isOpenSidebar ? "10vw" : "4vw" }}className="sidebar">
-        {/* <div className="top_section">
-          <h1 style={{display:isOpen ? "block" : "none" }} className="logo">Logo</h1>
-          <div className="bars">
-            <MenuButtonWide onClick={toggle}/>
-          </div>
-        </div> */}
+      {/* Sidebar */}
+      <div className={`sidebar ${isOpenSidebar ? "open" : "collapsed"}`}>
+        {/* Sidebar Menu */}
         <div className="menu">
           {menuItem.map((item, index) => (
             <NavLink
@@ -47,19 +44,19 @@ const Sidebar = ({ isOpenSidebar, direction, translations ,children ,addNote}) =
               activeClassName="active"
             >
               <div className="icon">{item.icon}</div>
-              <div style={{display:isOpenSidebar ? "block" : "none" }}className="text">{item.name}</div>
+              {isOpenSidebar && <div className="text">{item.name}</div>}
             </NavLink>
           ))}
         </div>
-        {/* Add Sticky Note button */}
-        <div className="menu-link" activeClassName="active" onClick={addNote}>
-          <div className="icon"><Sticky/></div>
-          <div style={{display:isOpenSidebar ? "block" : "none" }}className="text">{t.addNote}</div>
+        {/* Add Sticky Note Button */}
+        <div className="menu-link" onClick={addNote}>
+          <div className="icon"><Sticky /></div>
+          {isOpenSidebar && <div className="text">{t.addNote}</div>}
         </div>
       </div>
-      <main
-       style={{ width: isOpenSidebar ? "90vw" : "96vw"}}
-      >{children}</main>
+      
+      {/* Main Content */}
+      <main className="main-content">{children}</main>
     </div>
   );
 };

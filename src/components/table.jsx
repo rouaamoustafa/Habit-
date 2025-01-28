@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "../style/table.css";
 const TasksTable = ({ title, tasks, onStart, onComplete, onDelete, onEdit,  showEditDelete = true ,direction, translations }) => {
   const t = translations[direction];
 

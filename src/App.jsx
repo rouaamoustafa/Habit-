@@ -5,7 +5,7 @@ import Sidebar from './components/sidebar'
 import Header from './components/header'
 import Health from './pages/Salary'
 import Tasks from './pages/Tasks'
-import Habit from './pages/Habit'
+import Habit from './pages/habit'
 import Settings from './pages/Settings'
 import translations from './pages/translation'
 import StickyNote from "./components/sticky_note";
@@ -47,7 +47,7 @@ function App() {
               path="/tasks"
               element={<Tasks direction={direction} translations={translations} />}
             />
-            <Route path="/habit" element={<Habit direction={direction} translations={translations}/>} />
+            <Route path="/Habit" element={<Habit direction={direction} translations={translations}/>} />
          <Route path="/calorie" element={<Calorie direction={direction} translations={translations}/>} />
          <Route path="/settings" element={<Settings direction={direction} setDirection={setDirection} />} />
        </Routes>

@@ -18,18 +18,22 @@ const DonutChart = ({ title, value, color }) => {
   };
 
   const options = {
-    cutout: "70%",
+    responsive: true,
+    maintainAspectRatio: false, // Allow the chart to resize with its container
+    cutout: "70%", // Inner radius
     plugins: {
       legend: {
-        display: false,
+        display: false, // Hide legend
       },
     },
   };
 
   return (
-    <div className="donut-chart">
+    <div className="grid-container">
+      <div className="donut-chart">
       <h3>{title}</h3>
       <Doughnut data={data} options={options} />
+    </div>
     </div>
   );
 };

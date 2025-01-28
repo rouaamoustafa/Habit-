@@ -1,5 +1,6 @@
 import React from "react";
 import Calendar from "../components/calendar"
+import "../style/header.css";
 import { MenuButtonWide } from "react-bootstrap-icons";
  const Header = ({toggleSideBar,direction, translations}) =>{
     return (
